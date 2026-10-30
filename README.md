@@ -56,10 +56,12 @@ pip install -r requirements.txt
 Fra mappen `java-co`:
 
 ```bash
-streamlit run app.py
+streamlit run app.py --server.port 8502 --server.address 127.0.0.1
 ```
 
-Spillet åbner på http://localhost:8502. Porten er sat i `.streamlit/config.toml`, så TraderDash kan blive på http://localhost:8501.
+På Windows kan det samme gøres med `.\start.ps1`.
+
+Spillet åbner på http://localhost:8502, så TraderDash kan blive på http://localhost:8501. Porten sættes kun på kommandolinjen. Den må ikke stå i `.streamlit/config.toml`, fordi Streamlit Community Cloud ellers ikke kan nå appen.
 
 Kør testene med:
 
